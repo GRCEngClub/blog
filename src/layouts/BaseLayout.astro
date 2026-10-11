@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'GRC Engineering Club',
-  description = 'Projects, field notes, and ideas from the GRC Engineering Club.',
+  title = 'GRC Engineering Club AI Blog',
+  description = 'Practical AI workflows for GRC work and perspectives on AI governance from the GRC Engineering Club.',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
@@ -22,16 +22,16 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title="GRC Engineering Club" href={`${base}rss.xml`} />
-    <meta name="theme-color" content="#101c1a" />
+    <link rel="alternate" type="application/rss+xml" title="GRC Engineering Club AI Blog" href={`${base}rss.xml`} />
+    <meta name="theme-color" content="#faf4ef" />
     <title>{title}</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href={base} aria-label="GRC Engineering Club home">
+      <a class="brand" href={base} aria-label="GRC Engineering Club AI Blog home">
         <span class="brand-mark" aria-hidden="true">GRC</span>
-        <span>Engineering Club</span>
+        <span>Engineering Club · AI Blog</span>
       </a>
       <nav aria-label="Main navigation">
         <a href={base}>Home</a>
@@ -43,12 +43,12 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
     <footer class="site-footer">
       <div>
         <p class="footer-title">Built in public.</p>
-        <p>Questions become sketches. Sketches become prototypes. Prototypes become stories.</p>
+        <p>Practical AI workflows for GRC work and perspectives on AI governance. Sharing what we learn.</p>
       </div>
       <div class="footer-links">
         <a href={`${base}posts/`}>All posts</a>
         <a href={`${base}rss.xml`}>RSS feed</a>
-        <a href="https://github.com/GRCEngClub/blog">Source</a>
+        <a href="https://github.com/GRCEngClub/ai-blog">Source</a>
       </div>
     </footer>
   </body>

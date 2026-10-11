@@ -6,8 +6,8 @@ export async function GET(context) {
     .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
 
   return rss({
-    title: 'GRC Engineering Club',
-    description: 'Projects, field notes, and ideas from the GRC Engineering Club.',
+    title: 'GRC Engineering Club AI Blog',
+    description: 'Practical AI workflows for GRC work and perspectives on AI governance.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

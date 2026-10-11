@@ -1,17 +1,17 @@
 ---
-title: Welcome to the workbench
-description: A new home for project notes, lessons learned, and stories from the club.
+title: Welcome to the GRC AI blog
+description: Practical ways to use AI in GRC work, alongside perspectives on AI governance.
 published: 2026-10-11
 author: GRC Engineering Club
-tags: [club news, projects]
+tags: [AI, GRC, club news]
 ---
 
-This is the start of the GRC Engineering Club blog: a shared notebook for the things we build and the things we learn along the way.
+Welcome to the GRC Engineering Club AI Blog. This is where we share practical ways to use artificial intelligence in everyday governance, risk, and compliance work, alongside perspectives on AI governance.
 
-Expect project recaps, technical explainers, competition notes, member spotlights, and the occasional story about the tiny mistake that taught us something big.
+## What will we explore?
 
-## What belongs here?
+Our main focus is putting AI to work in GRC: reviewing policies, organizing evidence, supporting risk assessments, and making sense of compliance requirements. Expect hands-on workflows, walkthroughs, experiments, and lessons about what helps and where human review is still needed.
 
-Anything that could help the next person build with more confidence. A post can be a polished tutorial, a quick field note, or a photo-rich recap of a team project.
+Our writers bring different interests, too. Some will explore AI governance: how organizations oversee AI, manage its risks, and build policies around its use. Both perspectives belong here.
 
-The best engineering documentation is useful, honest, and specific. We plan to keep ours that way.
+The aim is to learn together and leave useful, honest notes for others working with AI in GRC.

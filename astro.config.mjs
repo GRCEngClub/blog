@@ -2,5 +2,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://grcengclub.github.io',
-  base: '/blog',
+  base: '/ai-blog',
 });

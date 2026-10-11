@@ -1,4 +1,4 @@
-# GRC Engineering Club blog
+# GRC Engineering Club AI Blog
 
 The club's static blog, built with [Astro](https://astro.build/) and deployed through GitHub Pages.
 
@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Then open `http://localhost:4321/blog/`.
+Then open `http://localhost:4321/ai-blog/`.
 
 ## Publish a post
 
@@ -32,7 +32,7 @@ Write the post below the second `---`. Commit and push to `main`; GitHub Actions
 
 ## First-time GitHub Pages setup
 
-In the repository on GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**. The included workflow will publish to `https://grcengclub.github.io/blog/` after the next push to `main`.
+In the repository on GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**. The included workflow will publish to `https://grcengclub.github.io/ai-blog/` after the next push to `main`.
 
 ## Commands
 
