@@ -1,0 +1,37 @@
+---
+interface Props {
+  post: {
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      published: Date;
+      author: string;
+      tags: string[];
+    };
+  };
+  featured?: boolean;
+}
+
+const { post, featured = false } = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const date = post.data.published.toLocaleDateString('en-US', {
+  month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+});
+---
+
+<article class:list={["post-card", { featured }]}>
+  <div class="post-meta">
+    <time datetime={post.data.published.toISOString()}>{date}</time>
+    <span aria-hidden="true">/</span>
+    <span>{post.data.author}</span>
+  </div>
+  <h3><a href={`${base}posts/${post.id}/`}>{post.data.title}</a></h3>
+  <p>{post.data.description}</p>
+  <div class="card-footer">
+    <ul class="tag-list" aria-label="Tags">
+      {post.data.tags.map((tag) => <li>{tag}</li>)}
+    </ul>
+    <span class="read-more" aria-hidden="true">Read note →</span>
+  </div>
+</article>

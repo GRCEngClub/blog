@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+---
+
+<BaseLayout title="Field Notes | GRC Engineering Club" description="Project logs and lessons from the GRC Engineering Club.">
+  <header class="page-heading">
+    <p class="kicker">The archive</p>
+    <h1>Field notes</h1>
+    <p>Build logs, explainers, club news, and the lessons worth keeping.</p>
+  </header>
+  <section class="post-list" aria-label="All posts">
+    {posts.map((post) => <PostCard post={post} />)}
+  </section>
+</BaseLayout>

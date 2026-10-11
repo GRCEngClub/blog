@@ -1,0 +1,30 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+interface Props { post: CollectionEntry<'posts'> }
+const { post } = Astro.props;
+const { Content } = await render(post);
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const date = post.data.published.toLocaleDateString('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+});
+---
+
+<BaseLayout title={`${post.data.title} | GRC Engineering Club`} description={post.data.description}>
+  <article class="article">
+    <header class="article-header">
+      <a class="back-link" href={`${base}posts/`}>← All field notes</a>
+      <div class="post-meta"><time datetime={post.data.published.toISOString()}>{date}</time><span>/</span><span>{post.data.author}</span></div>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
+      <ul class="tag-list">{post.data.tags.map((tag) => <li>{tag}</li>)}</ul>
+    </header>
+    <div class="article-body"><Content /></div>
+  </article>
+</BaseLayout>
